@@ -68,7 +68,7 @@
     .hero-bg {
       position: absolute;
       inset: -5%;
-      background: var(--gray-800) url('assets/photo1.png') center/cover no-repeat;
+      background: var(--gray-800) url('assets/photo1.png') center/contain no-repeat;
       filter: grayscale(100%);
       transition: filter 0.25s ease-out, opacity 0.25s ease-out, transform 0.1s linear;
       transform-origin: center center;
@@ -254,7 +254,7 @@
       position: absolute;
       inset: -5%;
       background-color: var(--gray-800);
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       filter: grayscale(100%);
@@ -370,9 +370,11 @@
 
     .location-photo {
       width: 100%;
-      aspect-ratio: 3/4;
-      max-height: 55vh;
-      object-fit: cover;
+      aspect-ratio: auto;
+      max-height: none;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
       filter: grayscale(100%);
       display: block;
     }
@@ -657,7 +659,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: url('assets/photo2.png') center/cover no-repeat;
+      background: url('assets/photo2.png') center/contain no-repeat;
       filter: grayscale(100%);
       z-index: 0;
     }
